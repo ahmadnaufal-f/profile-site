@@ -1,0 +1,23 @@
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #030617;
+    animation: Fade 1s 2s forwards;
+}
+
+.splash-animation-container {
+    height: 50vh;
+}
+
+@keyframes Fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

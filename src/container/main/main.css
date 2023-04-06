@@ -1,0 +1,15 @@
+.main-container {
+    width: 100%;
+    height: 100%;
+    animation: slideLeft 1s forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
