@@ -23,7 +23,7 @@ function Header() {
 
     const linkProps = {
         className: "nav-link-socmed",
-        dataIsIcon: "true",
+        "data-is-icon": "true",
         rel: "noreferrer",
         target: "_blank",
     };
@@ -51,7 +51,7 @@ function Header() {
                 <div className="navbar-links-wrapper">
                     <div className="navbar-links">
                         <a href="#home" className="nav-link">
-                            Home
+                            Main Page
                         </a>
                         <a href="#about" className="nav-link">
                             About

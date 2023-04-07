@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../header/header";
 import Background from "../../component/background/background";
+import Hero from "../hero/hero";
 import Splash from "../splash/splash";
 
 function Main() {
@@ -21,8 +22,8 @@ function Main() {
                 <div className="main-container">
                     <Header />
                     <Background />
-                    {/* <Hero />
-                    <Skill />
+                    <Hero />
+                    {/* <Skill />
                     <Service />
                     <Portfolio />
                     <Contact />

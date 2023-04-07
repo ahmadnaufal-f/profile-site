@@ -13,7 +13,7 @@ $hamburger-layer-width: 30px;
 $hamburger-layer-height: 3px;
 
 @import "../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
-$background-black-transparent: color.change($background-black, $alpha: 0.5);
+$background-black-transparent: color.change($background-black, $alpha: 0.9);
 $light-blue-transparent: color.change($light-blue, $alpha: 0.5);
 $light-blue-transparent-2: color.change($light-blue, $alpha: 0.2);
 $light-blue-lighter: color.change($light-blue, $lightness: 100%);
@@ -29,7 +29,7 @@ $light-blue-lighter: color.change($light-blue, $lightness: 100%);
     position: relative;
     z-index: 22;
     border-bottom: 1px solid $light-blue-transparent;
-    box-shadow: 0 3px 4px 0 $light-blue-transparent-2;
+    box-shadow: 0 3px 4px 0 $light-blue-transparent-2, 0 3px 8px 0 $light-blue-transparent-2;
 }
 
 .navbar-logo {
@@ -127,7 +127,7 @@ $light-blue-lighter: color.change($light-blue, $lightness: 100%);
     }
 
     @media screen and (max-width: 768px) {
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
         z-index: 20;
         opacity: 0;
         height: calc(100vh - 76px);
@@ -147,7 +147,7 @@ $light-blue-lighter: color.change($light-blue, $lightness: 100%);
 
             & a {
                 transform: translateY(-100%);
-                transition: all 0.5s ease-in-out;
+                transition: all 0.3s ease-in-out;
                 margin-right: 0;
             }
 
@@ -169,9 +169,11 @@ $light-blue-lighter: color.change($light-blue, $lightness: 100%);
 .navbar[aria-expanded="true"] .navbar-links-wrapper {
     @media screen and (max-width: 768px) {
         opacity: 1;
+        transition: all 0.5s ease-in-out;
 
         & > div a {
             transform: translateY(0);
+            transition: all 0.5s ease-in-out;
         }
     }
 }
