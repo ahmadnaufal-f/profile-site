@@ -136,6 +136,8 @@ $light-blue-lighter: color.change($light-blue, $lightness: 100%);
         position: absolute;
         top: 76px;
         left: 0;
+        font-size: 1.2rem;
+        font-weight: 500;
         background-color: $background-black-transparent;
 
         & > div {

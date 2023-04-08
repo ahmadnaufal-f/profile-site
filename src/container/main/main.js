@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../header/header";
 import Background from "../../component/background/background";
 import Hero from "../hero/hero";
+import About from "../about/about";
 import Splash from "../splash/splash";
 
 function Main() {
@@ -23,11 +24,11 @@ function Main() {
                     <Header />
                     <Background />
                     <Hero />
-                    {/* <Skill />
-                    <Service />
-                    <Portfolio />
-                    <Contact />
-                    <Footer /> */}
+                    <About />
+                    {/* <Service /> */}
+                    {/* <Portfolio /> */}
+                    {/* <Contact /> */}
+                    {/* <Footer /> */}
                     <div style={{ height: "2000px" }}></div>
                 </div>
             )}

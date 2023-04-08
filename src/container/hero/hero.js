@@ -4,8 +4,8 @@ import hero from "../../assets/images/hero.jpg";
 
 function Hero() {
     return (
-        <div className="hero-container">
-            <div className="hero-card">
+        <section className="hero-container">
+            <div className="hero-card cards glass">
                 <div className="hero__text">
                     <h2 className="hero__title">Hi, my name is</h2>
                     <h1 className="hero__name">Ahmad Naufal</h1>
@@ -16,7 +16,7 @@ function Hero() {
                     <img src={hero} alt="hero" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
