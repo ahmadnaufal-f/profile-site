@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "../../styles/_globalColor.scss";
+@import "../../styles/variables.scss";
 
 $light-blue-transparent: color.change($light-blue, $alpha: 0.4);
 $light-blue-transparent-2: color.change($light-blue, $alpha: 0.1);
@@ -86,7 +86,7 @@ $blue: hsl(189, 94%, 67%);
 
         & button {
             padding: 6px 20px;
-            border-radius: 0.8rem;
+            border-radius: 0.5rem;
             background-color: $white-transparent;
             border: solid 2px $white-transparent;
             color: $background-black;

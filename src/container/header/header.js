@@ -15,9 +15,11 @@ function Header() {
         if (!expanded) {
             setExpanded(true);
             burger.classList.add("is-active");
+            document.body.style.overflow = "hidden";
         } else {
             setExpanded(false);
             burger.classList.remove("is-active");
+            document.body.style.overflow = "auto";
         }
     };
 

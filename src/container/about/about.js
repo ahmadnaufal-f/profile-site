@@ -33,7 +33,7 @@ function About() {
                 <h2 className="about__title">A brief profile of myself</h2>
                 <p className="about__description">
                     I am a passionate front-end developer with 2 years of experience in creating stunning and responsive websites. I reside in the vibrant city of West Jakarta, where I constantly seek inspiration from my surroundings to create
-                    designs that not only look great but also provide an exceptional user experience
+                    designs that not only look great but also provide an exceptional user experience.
                 </p>
                 <a href="#about" className="about__button">
                     <span>

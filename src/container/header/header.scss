@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "../../styles/_globalColor.scss";
+@import "../../styles/variables.scss";
 
 $hamburger-layer-color: $text-white;
 $hamburger-layer-color-hover: $text-white;
@@ -127,18 +127,19 @@ $light-blue-lighter: color.change($light-blue, $lightness: 100%);
     }
 
     @media screen and (max-width: 768px) {
-        transition: all 0.3s ease-in-out;
-        z-index: 20;
-        opacity: 0;
-        height: calc(100vh - 76px);
+        height: 100vh;
+        height: 100lvh;
         width: 100vw;
-        width: 100dvw;
         position: absolute;
-        top: 76px;
+        top: 75px;
         left: 0;
+        z-index: 20;
         font-size: 1.2rem;
         font-weight: 500;
         background-color: $background-black-transparent;
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0s, opacity 0.3s ease-in-out;
 
         & > div {
             display: flex;
@@ -160,23 +161,24 @@ $light-blue-lighter: color.change($light-blue, $lightness: 100%);
     }
 }
 
-.hamburger {
-    padding-top: 6px;
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
 .navbar[aria-expanded="true"] .navbar-links-wrapper {
     @media screen and (max-width: 768px) {
         opacity: 1;
-        transition: all 0.5s ease-in-out;
+        visibility: visible;
+        transition: visibility 0s, opacity 0.5s ease-in-out;
 
         & > div a {
             transform: translateY(0);
             transition: all 0.5s ease-in-out;
         }
+    }
+}
+
+.hamburger {
+    padding-top: 6px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
 

@@ -5,7 +5,7 @@
     align-items: center;
     min-height: 100vh;
     background-color: #030617;
-    animation: Fade 1s 2s forwards;
+    animation: Fade 0.5s 1.5s forwards;
 }
 
 .splash-animation-container {

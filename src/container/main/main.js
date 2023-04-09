@@ -4,6 +4,7 @@ import Background from "../../component/background/background";
 import Hero from "../hero/hero";
 import About from "../about/about";
 import Splash from "../splash/splash";
+import Services from "../services/services";
 
 function Main() {
     const [isShowingSplash, setIsShowingSplash] = React.useState(true);
@@ -11,7 +12,7 @@ function Main() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsShowingSplash(false);
-        }, 3000);
+        }, 2000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -25,7 +26,7 @@ function Main() {
                     <Background />
                     <Hero />
                     <About />
-                    {/* <Service /> */}
+                    <Services />
                     {/* <Portfolio /> */}
                     {/* <Contact /> */}
                     {/* <Footer /> */}

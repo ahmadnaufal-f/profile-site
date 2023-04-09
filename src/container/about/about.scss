@@ -1,11 +1,11 @@
 @use "sass:color";
-@import "../../styles/globalColor.scss";
+@import "../../styles/variables.scss";
 
 .cards.about-container[data-height="300"] {
     height: 350px !important;
-    column-gap: 24px;
+    column-gap: 5%;
     row-gap: 32px;
-    padding: 0 5%;
+    padding: 0 3%;
     align-items: center;
 
     @media screen and (max-width: 768px) {
@@ -20,6 +20,11 @@
     height: 100%;
     display: grid;
     place-items: center;
+
+    @media screen and (max-width: 768px) {
+        padding-inline: 3rem;
+        flex-basis: content;
+    }
 }
 
 .about__text {
@@ -63,6 +68,7 @@
         transition: all 0.3s ease;
 
         & p {
+            display: inline-block;
             color: $light-blue;
             font-size: 1.1rem;
             margin: 0;

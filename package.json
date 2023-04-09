@@ -55,7 +55,7 @@
     },
     "prettier": {
         "tabWidth": 4,
-        "proseWrap": "never",
-        "printWidth": 250
+        "proseWrap": "always",
+        "printWidth": 150
     }
 }
