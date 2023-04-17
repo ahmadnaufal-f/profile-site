@@ -148,6 +148,10 @@ $light-blue-lighter: color.change($light-blue, $lightness: 100%);
             justify-content: center;
             height: 100%;
 
+            & > div:last-child {
+                margin-block-end: 55px;
+            }
+
             & a {
                 transform: translateY(-100%);
                 transition: all 0.3s ease-in-out;

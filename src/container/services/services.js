@@ -1,4 +1,4 @@
-import React, { useState, useEffect, CSSProperties } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faBuilding, faShoppingCart, faChartLine, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import "./services.scss";
@@ -53,6 +53,8 @@ function Services() {
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isDesktop, setIsDesktop] = useState(window.screen.width >= 1024);
+
     useEffect(() => {
         const buttons = document.querySelectorAll(".accordion__item");
         buttons.forEach((button) => {
@@ -78,13 +80,39 @@ function Services() {
         activeItem.setAttribute("aria-expanded", true);
     }, [activeIndex]);
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.screen.width >= 1024) {
+                setIsDesktop(true);
+            } else {
+                setIsDesktop(false);
+            }
+        };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (isDesktop) {
+            const items = document.querySelectorAll(".accordion__item");
+            items.forEach((item) => {
+                item.classList.add("glass");
+            });
+        } else {
+            const items = document.querySelectorAll(".accordion__item");
+            items.forEach((item) => {
+                item.classList.remove("glass");
+            });
+        }
+    }, [isDesktop]);
+
     return (
         <section className="cards services-container">
             <h2 className="services__title">My range of services</h2>
             <div className="accordion">
                 {items.map((item, index) => {
                     return (
-                        <div className="accordion__item glass" key={index} style={{ "--hue": item.hue }} data-index={index}>
+                        <div className="accordion__item " key={index} style={{ "--hue": item.hue }} data-index={index}>
                             <button className="accordion__heading" aria-expanded={index === activeIndex} aria-controls={`panel${index}-content`}>
                                 <div className="accordion__icon">
                                     <FontAwesomeIcon icon={item.icon} />

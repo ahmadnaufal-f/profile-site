@@ -8,6 +8,7 @@ $header-height: 45px;
 .services-container {
     display: block;
     height: 100% !important;
+    scroll-snap-align: center;
     width: clamp(800px, calc(100% - 10rem), 1000px);
     --accordion-padding: 1rem;
 
@@ -169,11 +170,11 @@ $header-height: 45px;
                 place-items: center;
 
                 & svg {
-                    fill: hsla(var(--hue), 67%, 90%, 1);
+                    fill: hsla(var(--hue), 20%, 90%, 1);
                     height: clamp(120px, 55%, 150px);
-                    opacity: 0.75;
+                    opacity: 0.7;
                     border-radius: 0.8rem;
-                    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0px 0px 5px 1px hsla(var(--hue), 67%, 70%, 0.7), 0px 0px 12px 2px hsla(var(--hue), 67%, 40%, 0.7);
                 }
             }
         }
